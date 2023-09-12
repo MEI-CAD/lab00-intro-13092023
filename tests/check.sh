@@ -1,9 +1,15 @@
 #!/bin/bash
 set -eu
 
-TESTS=( "intro" )
-FULL_ARGUMENTS=( "" )
-EXPECTED_OUTPUTS=( "Hello world!" )
+TESTS=( "intro" 
+        "intro_args" )
+
+ITERS=1000000
+STEP=3
+FULL_ARGUMENTS=( ""
+                "$ITERS $STEP" )
+EXPECTED_OUTPUTS=( "Hello world!"
+                "Iterations: $ITERS, Step: $STEP, Count: 3000000" )
 
 DARK_GREY='\e[2;30m'
 LIGHT_GREY='\e[2;37m'
