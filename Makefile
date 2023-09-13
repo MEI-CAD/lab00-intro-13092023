@@ -9,5 +9,13 @@ build_args:
 run: build
 	./intro
 
+debug:
+	gcc intro.c -g -o intro
+
+profile: clean
+	gcc intro_args.c -pg -o intro_args
+	./intro_args 1000000 3
+	gprof intro_args gmon.out > analysis.txt
+
 clean:
 	rm -f intro intro_args
