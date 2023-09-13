@@ -15,4 +15,5 @@ This practical class will provide an introduction to:
 - João Ribeiro
 - Bruno Silva
 - Nelson Matos
+- João Fernandes
 
